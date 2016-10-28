@@ -1,5 +1,8 @@
 # react-redux-theme-provider
-React helpers for theming components
+
+[![npm](https://img.shields.io/npm/v/react-redux-theme-provider.svg?style=flat-square)](https://www.npmjs.com/package/react-redux-theme-provider)
+
+React helpers for theming components.
 
 ## Installation
 

@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { createStore } from 'redux'
 
+import { updateTheme } from './actions'
 import themeReducer from './reducer'
 
-export default function withForm(initialState, reducer = themeReducer, enhancer) {
+export default function withTheme(initialState, reducer = themeReducer, enhancer) {
   return (BaseComponent) => {
     class WrappedComponent extends Component {
       componentWillMount() {
@@ -12,6 +13,13 @@ export default function withForm(initialState, reducer = themeReducer, enhancer)
           : initialState
 
         this.theme = createStore(reducer, state, enhancer)
+      }
+
+      componentWillReceiveProps(nextProps) {
+        if (typeof initialState === 'function') {
+          const newState = initialState(nextProps)
+          this.theme.dispatch(updateTheme(newState))
+        }
       }
 
       componentWillUnmount() {

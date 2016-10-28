@@ -1,1 +1,1 @@
-export const SET = 'react-redux-theme-provider/SET' // eslint-disable-line
+export const UPDATE = 'react-redux-theme-provider/UPDATE' // eslint-disable-line

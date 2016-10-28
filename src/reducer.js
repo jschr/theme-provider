@@ -1,7 +1,7 @@
-import { SET } from './constants'
+import { UPDATE } from './constants'
 
 const handlers = {
-  [SET]: (state, newState) => Object.assign(state, newState)
+  [UPDATE]: (state, newState) => Object.assign(state, newState)
 }
 
 export default function formReducer(state = {}, action = {}) {
