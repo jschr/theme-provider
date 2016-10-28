@@ -1,0 +1,44 @@
+{
+  "name": "react-redux-theme-provider",
+  "version": "0.0.1",
+  "description": "React helpers for theming components",
+  "main": "lib/index.js",
+  "scripts": {
+    "build:lib": "babel src --out-dir lib",
+    "clean": "rimraf lib",
+    "lint": "eslint src",
+    "prepublish": "npm run clean && npm run lint && npm run build:lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jschr/react-redux-theme-provider.git"
+  },
+  "author": "Jordan Schroter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jschr/react-redux-theme-provider/issues"
+  },
+  "homepage": "https://github.com/jschr/react-redux-theme-provider#readme",
+  "peerDependencies": {
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-redux": "^3.0.0 || ^4.0.0",
+    "redux": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.3.15",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "base64-font-loader": "0.0.4",
+    "cross-env": "^3.1.3",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "rimraf": "^2.5.4"
+  }
+}
