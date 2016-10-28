@@ -14,7 +14,7 @@ npm install --save react-redux-theme-provider
 
 ## Usage
 
-```
+```js
 // MyApp.js
 
 import { withTheme, ThemeProvider } from 'react-redux-theme-provider
@@ -38,7 +38,7 @@ export default withTheme(props => {
 })
 ```
 
-```
+```js
 // MyThemedComponent.js
 
 import { withStyles } from 'react-redux-theme-provider
