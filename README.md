@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/react-redux-theme-provider.svg?style=flat-square)](https://www.npmjs.com/package/react-redux-theme-provider)
 
-React helpers for theming components.
+React helpers for theming components. Works great with inline styles or any css-in-js library.
 
 ## Installation
 
