@@ -1,7 +1,10 @@
 import { UPDATE } from './constants'
 
 const handlers = {
-  [UPDATE]: (state, newState) => Object.assign(state, newState)
+  [UPDATE]: (state, propsToMerge) => ({
+    ...state,
+    ...propsToMerge
+  })
 }
 
 export default function formReducer(state = {}, action = {}) {
