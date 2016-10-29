@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import themeStoreShape from './themeStoreShape'
 
-export default function withStyles(getStyles) {
+export default function withStyles(styles) {
   return (BaseComponent) => {
     class WrappedComponent extends Component {
       componentWillMount() {
@@ -10,9 +10,11 @@ export default function withStyles(getStyles) {
 
         this.setStyles(theme.getState())
 
-        this.unsubscribe = theme.subscribe(() => {
-          this.setStyles(theme.getState())
-        })
+        if (typeof styles === 'function') {
+          this.unsubscribe = theme.subscribe(() => {
+            this.setStyles(theme.getState())
+          })
+        }
       }
 
       componentWillUnmount() {
@@ -20,7 +22,11 @@ export default function withStyles(getStyles) {
       }
 
       setStyles(themeVars) {
-        this.setState({ styles: getStyles(themeVars) })
+        this.setState({
+          styles: typeof styles === 'function'
+            ? styles(themeVars)
+            : styles
+        })
       }
 
       render() {
