@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
 import themeStoreShape from './themeStoreShape'
 
 export default function withStyles(styles) {
   return (BaseComponent) => {
-    class WrappedComponent extends Component {
+    class WrappedComponent extends PureComponent {
       componentWillMount() {
         const { theme } = this.context
 
