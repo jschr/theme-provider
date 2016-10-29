@@ -18,7 +18,7 @@ export default function withStyles(styles) {
       }
 
       componentWillUnmount() {
-        this.unsubscribe()
+        if (this.unsubscribe) this.unsubscribe()
       }
 
       setStyles(themeVars) {
