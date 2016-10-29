@@ -30,8 +30,7 @@ export default function withStyles(styles) {
       }
 
       render() {
-        const { styles } = this.state
-        return <BaseComponent {...this.props} styles={styles} />
+        return <BaseComponent {...this.props} styles={this.state.styles} />
       }
     }
 
