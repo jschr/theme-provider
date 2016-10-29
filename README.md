@@ -49,7 +49,7 @@ function MyThemedComponent({ styles }) {
   )
 }
 
-export default withStyles((theme) => ({
+export default withStyles(theme => ({
   base: {
     background: theme.primaryColor
   }
