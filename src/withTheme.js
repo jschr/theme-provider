@@ -15,7 +15,7 @@ export default function withTheme(initialState, reducer = themeReducer, enhancer
         this.theme = createStore(reducer, state, enhancer)
       }
 
-      // TODO: updating theme stateould cause many redundant css rules to be generated if using a
+      // TODO: updating theme state could cause many redundant css rules to be generated if using a
       // lib like glamor or aphrodite because they currently do not remove unused rules. Commenting
       // out for now because I haven't had a use case where theme variables changed without a page
       // refresh.
