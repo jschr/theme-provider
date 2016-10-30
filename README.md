@@ -56,3 +56,47 @@ export default withStyles(theme => ({
 }))(MyThemedComponent)
 
 ```
+
+## Usage with Glamor
+
+```js
+// MyThemedComponent.js
+
+import { style } from 'glamor'
+import { withStyles } from 'react-redux-theme-provider'
+
+function MyThemedComponent({ styles }) {
+  return (
+    <div {...styles.base} />
+  )
+}
+
+export default withStyles(theme => ({
+  base: style({
+    background: theme.primaryColor
+  })
+}))(MyThemedComponent)
+
+```
+
+## Usage with Aphrodite
+
+```js
+// MyThemedComponent.js
+
+import { StyleSheet, css } from 'glamor'
+import { withStyles } from 'react-redux-theme-provider'
+
+function MyThemedComponent({ styles }) {
+  return (
+    <div className={css(styles.base)} />
+  )
+}
+
+export default withStyles(theme => StyleSheet.create({
+  base: {
+    background: theme.primaryColor
+  }
+}))(MyThemedComponent)
+
+```
