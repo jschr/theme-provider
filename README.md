@@ -30,12 +30,12 @@ function MyApp({ theme }) {
 // theme variables
 export default withTheme({
   primaryColor: 'blue'
-})
+})(MyApp)
 
 // or theme variables as a function of props
 export default withTheme(props => ({
   primaryColor: props.primaryColor
-}))
+}))(MyApp)
 ```
 
 ```js
