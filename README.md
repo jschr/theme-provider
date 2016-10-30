@@ -33,9 +33,9 @@ export default withTheme({
 })
 
 // or theme variables as a function of props
-export default withTheme(props => {
+export default withTheme(props => ({
   primaryColor: props.primaryColor
-})
+}))
 ```
 
 ```js
