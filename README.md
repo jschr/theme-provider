@@ -84,7 +84,7 @@ export default withStyles(theme => ({
 ```js
 // MyThemedComponent.js
 
-import { StyleSheet, css } from 'glamor'
+import { StyleSheet, css } from 'aphrodite'
 import { withStyles } from 'react-redux-theme-provider'
 
 function MyThemedComponent({ styles }) {
