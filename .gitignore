@@ -1,7 +1,5 @@
-.vscode/
-node_modules/
-dist/
-lib/
-
 .DS_Store
 *.log
+node_modules
+dist
+lib
