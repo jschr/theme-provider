@@ -27,6 +27,11 @@ function ThemeForm({ form, onSubmit }) {
           <Dropdown label='Base Font Size' value={value} options={[12, 16, 22, 36]} onValue={setValue} />
         }
       </Field>
+
+      <br />
+      <a href='https://github.com/jschr/theme-provider/blob/master/examples/basic/src'>
+        view code
+      </a>
     </Form>
   )
 }
