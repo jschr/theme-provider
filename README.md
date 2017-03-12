@@ -20,7 +20,7 @@ npm install --save theme-provider
 ```js
 // MyApp.js
 
-import { withTheme, ThemeProvider } from 'react-redux-theme-provider'
+import { withTheme, ThemeProvider } from 'theme-provider'
 
 function MyApp({ theme }) {
   return (
@@ -41,10 +41,12 @@ export default withTheme(props => ({
 }))(MyApp)
 ```
 
+Check out the [basic form example](examples/basic) for the entire source.
+
 ```js
 // MyThemedComponent.js
 
-import { withStyles } from 'react-redux-theme-provider'
+import { withStyles } from 'theme-provider'
 
 function MyThemedComponent({ styles }) {
   return (
@@ -66,7 +68,7 @@ export default withStyles(theme => ({
 // MyThemedComponent.js
 
 import { style } from 'glamor'
-import { withStyles } from 'react-redux-theme-provider'
+import { withStyles } from 'theme-provider'
 
 function MyThemedComponent({ styles }) {
   return (
@@ -88,7 +90,7 @@ export default withStyles(theme => ({
 // MyThemedComponent.js
 
 import { StyleSheet, css } from 'aphrodite'
-import { withStyles } from 'react-redux-theme-provider'
+import { withStyles } from 'theme-provider'
 
 function MyThemedComponent({ styles }) {
   return (
