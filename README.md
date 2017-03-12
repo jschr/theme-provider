@@ -1,15 +1,18 @@
-# react-redux-theme-provider
+# theme-provider
 
-[![npm](https://img.shields.io/npm/v/react-redux-theme-provider.svg?style=flat-square)](https://www.npmjs.com/package/react-redux-theme-provider)
+[![npm](https://img.shields.io/npm/v/theme-provider.svg)](https://www.npmjs.com/package/theme-provider)
+[![Build Status](https://img.shields.io/travis/jschr/theme-provider/master.svg)](https://travis-ci.org/jschr/theme-provider)
 
-React helpers for theming components. Works great with inline styles or any css-in-js library.
+React helpers for theming components. Works with inline styles or any css-in-js library.
+
+Demos:
+  * [Basic Example](http://theme-provider-basic-example.surge.sh/)
 
 ## Installation
 
-React 15.3.0 and Redux 3.0.0 or later are peer dependencies.
-
-```
-npm install --save react-redux-theme-provider
+```bash
+npm install --save react react-dom redux react-redux # peer dependencies
+npm install --save theme-provider
 ```
 
 ## Usage
