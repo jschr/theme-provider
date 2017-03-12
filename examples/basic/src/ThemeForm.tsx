@@ -4,6 +4,7 @@ import { withForm, FormProvider, Field, connectForm } from 'form-provider'
 
 import { preventDefault, target } from './domHelpers'
 import Form from './Form'
+import Dropdown from './Dropdown'
 
 export interface ThemeFormProps {
   baseFontSize: number
@@ -23,15 +24,7 @@ function ThemeForm({ form, onSubmit }) {
 
       <Field path='baseFontSize'>
         {({ value, setValue }) =>
-          <div>
-            <label>Base Font Size: </label>
-            <select value={value} onChange={target((newValue) => setValue(+newValue))}>
-              <option value={12}>12</option>
-              <option value={16}>16</option>
-              <option value={22}>22</option>
-              <option value={36}>36</option>
-            </select>
-          </div>
+          <Dropdown label='Base Font Size' value={value} options={[12, 16, 22, 36]} onValue={setValue} />
         }
       </Field>
     </Form>

@@ -11,11 +11,10 @@ export interface BasicThemeProps {
 }
 
 function createTheme({ baseFontSize }) {
-  console.log(baseFontSize)
   return {
     baseFontSize,
     fontFamily: '\'Avenir Next\', \'Helvetic Neue\', Arial, sans-serif',
-    primaryColor: 'red'
+    primaryColor: '#66afe9'
   }
 }
 
