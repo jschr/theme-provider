@@ -1,6 +1,4 @@
 import * as React from 'react'
-import { compose } from 'redux'
-import { FormProvider, FormStore } from 'form-provider'
 import { withStyles } from 'theme-provider'
 import { css } from 'glamor'
 
@@ -30,6 +28,7 @@ function createStyles(theme) {
       backgroundColor: '#fff',
       border: '1px solid #eee',
       borderRadius: '1rem',
+      marginBottom: '2rem',
       boxShadow: 'none',
       outline: 'none',
 

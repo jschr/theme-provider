@@ -3,11 +3,11 @@ import * as ReactDOM from 'react-dom'
 
 import BasicTheme from './BasicTheme'
 
-function render({ baseFontSize }) {
+function render({ baseFontSize, lineClamp }) {
   ReactDOM.render(
-    <BasicTheme baseFontSize={baseFontSize} onSubmit={render} />,
+    <BasicTheme baseFontSize={baseFontSize} lineClamp={lineClamp} onSubmit={render} />,
     document.getElementById('root')
   )
 }
 
-render({ baseFontSize: 16 })
+render({ baseFontSize: 16, lineClamp: 3 })

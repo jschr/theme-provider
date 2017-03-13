@@ -7,6 +7,7 @@ import ThemeForm from './ThemeForm'
 
 export interface BasicThemeProps {
   baseFontSize: number
+  lineClamp: number
   onSubmit: (themeState: any) => void
 }
 
@@ -18,11 +19,11 @@ function createTheme({ baseFontSize }) {
   }
 }
 
-function BasicTheme({ theme, baseFontSize, onSubmit }) {
+function BasicTheme({ theme, baseFontSize, lineClamp, onSubmit }) {
   return (
     <ThemeProvider theme={theme}>
       <Global>
-        <ThemeForm baseFontSize={baseFontSize} onSubmit={onSubmit} />
+        <ThemeForm baseFontSize={baseFontSize} lineClamp={lineClamp} onSubmit={onSubmit} />
       </Global>
     </ThemeProvider>
   )
