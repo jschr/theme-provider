@@ -1,6 +1,4 @@
 import * as React from 'react'
-import { compose } from 'redux'
-import { FormProvider, FormStore } from 'form-provider'
 import { withStyles } from 'theme-provider'
 import { css } from 'glamor'
 
