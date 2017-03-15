@@ -1,6 +1,6 @@
 {
   "name": "theme-provider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React helpers for building themes.",
   "author": "Jordan Schroter",
   "license": "MIT",
