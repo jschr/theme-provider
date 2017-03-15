@@ -32,12 +32,18 @@ export default function withStyles<P>(
       private componentWillMount() {
         const { theme } = this.context
 
-        this.updateStyles()
+        this.updateStyles(this.props)
 
         if (typeof createStyles === 'function') {
           this.unsubscribe = theme.subscribe(() => {
-            this.updateStyles()
+            this.updateStyles(this.props)
           })
+        }
+      }
+
+      private componentWillReceiveProps(nextProps) {
+        if (typeof withStyles === 'function') {
+          this.updateStyles(nextProps)
         }
       }
 
@@ -45,12 +51,12 @@ export default function withStyles<P>(
         if (this.unsubscribe) this.unsubscribe()
       }
 
-      private updateStyles() {
+      private updateStyles(props) {
         const { theme } = this.context
 
         this.setState({
           styles: typeof createStyles === 'function'
-            ? createStyles(theme.getState(), this.props)
+            ? createStyles(theme.getState(), props)
             : createStyles
         })
       }
