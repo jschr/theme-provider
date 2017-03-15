@@ -10,7 +10,7 @@ export interface StylesProps {
 }
 
 export default function withStyles<P>(
-  createStyles: (themeState: ThemeState) => any
+  createStyles: (themeState: ThemeState, props: P) => any
 ) {
   return function createComponent(
     BaseComponent: React.ComponentClass<P & StylesProps> | React.StatelessComponent<P & StylesProps>
@@ -50,7 +50,7 @@ export default function withStyles<P>(
 
         this.setState({
           styles: typeof createStyles === 'function'
-            ? createStyles(theme.getState())
+            ? createStyles(theme.getState(), this.props)
             : createStyles
         })
       }
