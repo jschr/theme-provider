@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux'
-import { connect, Options, ComponentDecorator } from 'react-redux'
+import { connect, Options, ComponentDecorator, ComponentMergeDecorator } from 'react-redux'
 
 export interface ConnectOptions extends Options {
   getDisplayName: (name: string) => string
@@ -11,7 +11,7 @@ export default function connectTheme(
   mapStateToProps: (state: any) => any,
   mapDispatchToProps?: (dispatch: Dispatch<any>) => any,
   mergeProps?: (stateProps: any, dispatchProps: any, ownProps: any) => any,
-) {
+): ComponentDecorator<any> {
   const options: ConnectOptions = {
     getDisplayName: (name) => `ConnectTheme(${name})`,
     methodName: 'connectTheme',
