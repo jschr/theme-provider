@@ -11,7 +11,7 @@ export default function connectTheme(
   mapStateToProps: (state: any) => any,
   mapDispatchToProps?: (dispatch: Dispatch<any>) => any,
   mergeProps?: (stateProps: any, dispatchProps: any, ownProps: any) => any,
-): ComponentDecorator<any> {
+): ComponentDecorator<any, any> {
   const options: ConnectOptions = {
     getDisplayName: (name) => `ConnectTheme(${name})`,
     methodName: 'connectTheme',
