@@ -9,7 +9,7 @@ export interface ThemeProviderProps {
   theme: ThemeStore
 }
 
-export default class ThemeProvider extends PureComponent<ThemeProviderProps, void> {
+export default class ThemeProvider extends PureComponent<ThemeProviderProps, {}> {
   private static propTypes = {
     theme: themeStoreShape.isRequired,
     children: PropTypes.node
