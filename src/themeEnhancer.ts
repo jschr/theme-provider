@@ -8,7 +8,7 @@ import { ThemeState } from './themeReducer'
 export interface ThemeStore extends Store<any> {
   getThemeState: () => ThemeState
   setThemeState: (state: ThemeState) => void
-  dispatch: (action: Action) => void
+  dispatch: (action: Action) => any
   setValue: (path: objectPath.Path, value: any) => void
   reset: () => void
   clear: () => void
