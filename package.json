@@ -1,6 +1,6 @@
 {
   "name": "theme-provider",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "React helpers for building themes.",
   "author": "Jordan Schroter",
   "license": "MIT",
@@ -25,7 +25,8 @@
   "dependencies": {
     "invariant": "^2.2.1",
     "object-path": "^0.11.4",
-    "object-path-immutable": "^0.5.1"
+    "object-path-immutable": "^0.5.1",
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "@types/enzyme": "^2.7.5",
@@ -33,6 +34,7 @@
     "@types/invariant": "^2.2.28",
     "@types/jsdom": "^2.0.30",
     "@types/mocha": "^2.2.40",
+    "@types/prop-types": "^15.5.1",
     "@types/react-redux": "^4.4.43",
     "cross-env": "^3.1.4",
     "enzyme": "^2.7.1",

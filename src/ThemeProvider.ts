@@ -1,4 +1,5 @@
-import { PureComponent, PropTypes, Children } from 'react'
+import { PureComponent, Children } from 'react'
+import * as PropTypes from 'prop-types'
 import * as invariant from 'invariant'
 
 import { ThemeStore } from './themeEnhancer'
